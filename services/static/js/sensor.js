@@ -76,7 +76,6 @@ class Sensor
                 this.raySpread / 2, 
                 -this.raySpread/2, 
                 this.rayCount==1? 0.5 : i/(this.rayCount - 1)
-            
                 ) + this.car.angle;
 
             const start = {x:this.car.x, y:this.car.y};
@@ -89,6 +88,7 @@ class Sensor
     {
         for (let i = 0; i < this.rays.length; i ++)
         {
+            //sets the endPoint of the yellow part of the ray to the closest intersection if there is one.
             let end = this.rays[i][1];
             if (this.readings[i])
             {
